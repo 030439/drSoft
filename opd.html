@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>RC-POS - Inventory Reports</title>
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .form-control{
+    border-radius: 0.80rem;
+  }
+      .nav-link {
+        margin: 5px;
+        color: #ed1c24 !important;
+        background-color: #f5f5f5;
+        font-family: "Poppins", sans-serif;
+        border-radius: 10px;
+      }
+      .dropdown-toggle,.nav-link:hover {
+        background-color: #ed1c24;
+        color: #fff !important;
+      }
+    </style>
+  </head>
+  <body
+    id="page-top"
+    style="background: no-repeat; background: url('images/hospital.jpeg')"
+  >
+    <nav
+      class="navbar bg-white navbar-expand navbar-dark bg-dark static-top p-4"
+    >
+      <a
+        style="
+          color: #ed1c24;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+        "
+        class="navbar-brand mr-1"
+        href="index.html"
+      >
+        <span
+          ><img
+            src="images/health-clinic.svg"
+            style="
+              width: 50px;
+              background-color: #f5f5f5;
+              padding: 10px;
+              border-radius: 100%;
+            "
+        /></span>
+        ALI KARIM FAMILY CLINIC</a
+      >
+      <!-- <button
+        class="btn text-secondary btn-link btn-sm text-white order-1 order-sm-0"
+        id="sidebarToggle"
+        href="#"
+      >
+        <i class="fa fa-bars"></i>
+      </button> -->
+      <!-- Navbar Search -->
+      <form
+        class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"
+      ></form>
+      <!-- Navbar -->
+      <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown no-arrow ml-3 text-secondary">
+          <a
+            class="nav-link dropdown-toggle text-secondary"
+            href="#"
+            id="userDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >My Account
+            <i class="fa fa-user-circle fa-fw"></i>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="userDropdown"
+          >
+            <div class="dropdown-header">Rao Ahmed</div>
+            <a class="dropdown-item" href="profile.html">
+              <i class="fa fa-user"></i> Profile</a
+            >
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-cog"></i> Settings</a
+            >
+            <a class="dropdown-item" href="history.html">
+              <i class="fa fa-line-chart"></i> Activity Log</a
+            >
+            <div class="dropdown-divider"></div>
+            <a
+              class="dropdown-item"
+              href="#"
+              data-toggle="modal"
+              data-target="#logoutModal"
+            >
+              <i class="fa fa-power-off"></i> Logout</a
+            >
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="sidebar navbar-nav text-secondary mt-1 p-4"
+        style="background-color: #fff; height: 300px !important;"
+      >
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.html">
+            <i class="fa fa-fw fa-users"></i>
+            <span>Dashboard</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="opd.html">
+            <i class="fa fa-fw fa-user-md"></i>
+            <span>OPD</span>
+          </a>
+        </li>
+        <li
+          class="nav-item dropdown"
+          style="color: #ed1c24; font-family: 'Poppins', sans-serif"
+        >
+          <a
+            class="nav-link"
+            href="#"
+            id="pagesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            style="color: #ed1c24; font-family: 'Poppins', sans-serif"
+          >
+            <i class="fa fa-fw fa-folder"></i>
+            <span>
+              Other Charges
+              <i class="float-right fa fa-angle-down"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="#"> SLC</a>
+            <a class="dropdown-item" href=".html"> RBS</a>
+            <a class="dropdown-item" href="dressing.html"> Dressing</a>
+            <a class="dropdown-item" href=".html"> Only 1/2</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="product-brands.html">
+            <i class="fa fa-fw fa-industry"></i>
+            <span>Bill Cancelation</span></a
+          >
+        </li>
+      </ul>
+
+
+
+
+      <div id="content-wrapper">
+        <div class="container-fluid">
+          <!-- Page Content -->
+          <!-- DataTables Example -->
+          <div class="card ">
+            <div
+              class="rounded card-header bg-white h2 p-4"
+              style="
+                color: #ed1c24;
+                font-weight: bold;
+                font-family: 'Poppins', sans-serif;
+              "
+            >
+            OPD
+              <a
+                href="#"
+                class="text-white"
+                data-toggle="modal"
+                data-target="#dressingModal"
+              >
+                <span
+                  class="float-right"
+                  style="
+                color: #2e2e2e;
+                font-size: 20px;
+                font-family: 'Poppins', sans-serif;
+              "
+                >
+                
+              RS: 600
+                </span>
+              </a>
+            </div>
+            <div class="card-body" style="background-color: #f5f5f5">
+              <div class="table-responsive" style="height: 350px;">
+                <form class="p-5">
+                  <div class="row">
+                    <div class="col">
+                      <label for="patient">Patient Name</label>
+                      <input id="patient" type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <label for="patient"> Date</label>
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-6">
+                      <label for="patient">Other Charges </label>
+                      <input id="patient" type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col-6">
+                      <label for="patient">Emergency  </label>
+                      </div>
+                      </div>
+                      </form>
+                      </div></div></div>
+                      </div>
+                      <footer class="sticky-footer " style="width: 100%;">
+                        <div class="container my-auto">
+                          <div class="copyright text-center ">
+                            <br />
+
+                            Developed By
+                            <!-- &copy;  -->
+                            <a href="#"> Praim Karmaa</a>
+                            <br /><br />
+
+                              Copyright &copy; 2022-2023
+                              <a href="https://appzaib.github.io">Appzaib</a>. All rights
+                              reserved.</span
+                            >
+                            <br /><br /><br />
+                          </div>
+                    </div>
+                  </footer>
+      </div>
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Modals -->
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close text-white"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-danger" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Product Modal-->
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="dressingModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="dressingModalTitle"
+      aria-hidden="true"
+       >
+      <div class="modal-dialog  modal-dialog-centered" role="document">
+        <div class="modal-content rounded">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">OPD Slip</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="First name">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name">
+                  </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+                  <div class="float-right mt-3">
+                    <button
+                      type="button"
+                      class="btn text-white"
+                      style="
+                        background-color: #1492e6;
+                        font-family: 'Poppins', sans-serif;
+                      "
+                    >
+                      Submit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn text-white"
+                      data-dismiss="modal"
+                      style="
+                        background-color: #ed1c24;
+                        font-family: 'Poppins', sans-serif;
+                      "
+                    >
+                      Close
+                    </button>
+                  </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/rc-pos.min.js"></script>
+  </body>
+</html>

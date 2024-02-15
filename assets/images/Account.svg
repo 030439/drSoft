@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62" height="62" viewBox="0 0 62 62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e4e4e4;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #c2c2c2;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="31" cy="31" r="31"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" class="cls-2">
+    <g id="Group_6" data-name="Group 6" transform="translate(8.035 17.412)">
+      <g id="Ellipse_2" data-name="Ellipse 2" class="cls-3" transform="translate(-0.035 15.588)">
+        <circle class="cls-4" cx="23" cy="23" r="23"/>
+        <circle class="cls-5" cx="23" cy="23" r="22.5"/>
+      </g>
+      <g id="Ellipse_3" data-name="Ellipse 3" class="cls-3" transform="translate(10.965 -0.412)">
+        <ellipse class="cls-4" cx="12" cy="12.5" rx="12" ry="12.5"/>
+        <ellipse class="cls-5" cx="12" cy="12.5" rx="11.5" ry="12"/>
+      </g>
+    </g>
+  </g>
+</svg>
